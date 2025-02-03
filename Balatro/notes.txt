@@ -1,0 +1,21 @@
+bool isPair(const std::vector<Card>& hand);
+
+bool isDoublePair(const std::vector<Card>& hand){};
+
+bool isThreeOfKind(const std::vector<Card>& hand){};
+
+bool isStraight(const std::vector<Card>& hand){};
+
+bool isFlush(const std::vector<Card>& hand){};
+
+bool isFullHouse(const std::vector<Card>& hand){};
+
+bool isFourOfAKind(const std::vector<Card>& hand){};
+
+bool isStraightFlush(const std::vector<Card>& hand){};
+
+bool isFiveOfAKind(const std::vector<Card>& hand){};
+
+bool isFlushHouse(const std::vector<Card>& hand){};
+
+bool isFlushFive(const std::vector<Card>& hand){};
