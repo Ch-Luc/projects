@@ -90,7 +90,7 @@ vector<int> playedCards(const vector<Card*>& hand){
         if (res.empty()){
             cout << "Please select cards to play." << endl;
         }
-        else if (res.size() >= 5){
+        else if (res.size() > 5){
             cout << "Please select a maximum of 5 cards." << endl;
         }
         else{

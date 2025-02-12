@@ -2,6 +2,7 @@
 #define DEF_CARD
 
 #include <string>
+#include <vector>
 
 class Card
 {
@@ -14,10 +15,11 @@ class Card
     int chipBase() const;
     void addChip(const int& chip);
     void addMult(const int& mult);
-    void addScore(float score[2]) const;
+    void addScore(std::vector<double>& score) const;
     std::string suitCard() const;
     std::string nameCard() const;
     std::string appearenceCard() const;
+    std::string sealCard() const;
     void displayCard() const;
 
     private:

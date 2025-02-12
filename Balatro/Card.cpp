@@ -64,7 +64,7 @@ int Card::chipBase() const{
         return 10;
     }
     // If no name
-    return -10000;
+    return -1;
 }
 
 void Card::addChip(const int& chip){
@@ -75,7 +75,7 @@ void Card::addMult(const int& mult){
     m_mult+=mult;
 }
 
-void Card::addScore(float score[2]) const{
+void Card::addScore(vector<double>& score) const{
     // Specific case of Stone cards
     if (m_appearance=="Stone"){
         score[0]+=50;
@@ -132,6 +132,10 @@ string Card::appearenceCard() const{
     return m_appearance;
 }
 
+string Card::sealCard() const{
+    return m_seal;
+}
+
 void Card::displayCard() const{
     cout << "< " << m_name << " | ";
     cout << m_suit << " | ";
@@ -140,6 +144,7 @@ void Card::displayCard() const{
     cout << m_seal << " >" << endl;
 }
 
+// Validation functions for constructor
 bool isInVector(const std::string& test, const std::vector<std::string>& list){
     for(int i=0; i<list.size(); i++){
         if(test==list[i]){
